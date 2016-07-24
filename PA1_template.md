@@ -10,18 +10,6 @@ keep_md: true
 
 ```r
 activity <- read.csv("activity.csv")
-```
-
-```
-## Warning in file(file, "rt"): cannot open file 'activity.csv': No such file
-## or directory
-```
-
-```
-## Error in file(file, "rt"): cannot open the connection
-```
-
-```r
 activity.by.day <- aggregate(. ~ date, data = activity, sum)[, 1:2]
 activity.by.time <- aggregate(. ~ interval, data = activity, mean)[, 1:2]
 ```
